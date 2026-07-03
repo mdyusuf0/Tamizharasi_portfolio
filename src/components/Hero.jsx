@@ -57,16 +57,16 @@ const Hero = ({ onVideoLoaded }) => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Background Poster - Displays immediately, positioned at 20% to place the girl on the left */}
+      {/* Background Poster - Displays immediately, positioned at 80% to place the girl on the left */}
       <div 
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 transition-opacity duration-1000"
         style={{ 
           backgroundImage: `url(${heroPoster})`,
-          backgroundPosition: '20% 20%'
+          backgroundPosition: '80% 20%'
         }}
       />
 
-      {/* Background Video - Smoothly fades in once loaded, positioned at 20% */}
+      {/* Background Video - Smoothly fades in once loaded, positioned at 80% */}
       <video
         ref={videoRef}
         loop
@@ -77,7 +77,7 @@ const Hero = ({ onVideoLoaded }) => {
         className={`absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${
           isVideoReady ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ objectPosition: '20% 20%' }}
+        style={{ objectPosition: '80% 20%' }}
       >
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
