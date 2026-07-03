@@ -88,10 +88,10 @@ const Hero = ({ onVideoLoaded }) => {
       <div className="absolute inset-0 bg-gradient-to-tl from-black/75 via-transparent to-transparent z-10" />
 
       {/* Content Container (uses flex-row-reverse to swap text to the right and play button to the left) */}
-      <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row-reverse justify-end md:justify-between items-start md:items-end text-left w-full">
+      <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-16 max-w-[1400px] mx-auto flex flex-col md:flex-row-reverse justify-end md:justify-between items-start md:items-end text-left w-full">
         
         {/* Right Side: Text and Buttons (right-aligned on desktop to balance layout) */}
-        <div className="flex flex-col items-start text-left md:items-end md:text-right max-w-2xl w-full z-20">
+        <div className="flex flex-col items-start text-left md:items-end md:text-right max-w-xl w-full z-20">
 
           {/* Main Heading */}
           <h1 
