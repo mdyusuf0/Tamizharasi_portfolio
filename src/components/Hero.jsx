@@ -57,16 +57,16 @@ const Hero = ({ onVideoLoaded }) => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Background Poster - Displays immediately, positioned at 80% to place the girl on the left */}
+      {/* Background Poster - Displays immediately, positioned at 90% to place the girl on the right */}
       <div 
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 transition-opacity duration-1000"
         style={{ 
           backgroundImage: `url(${heroPoster})`,
-          backgroundPosition: '80% 20%'
+          backgroundPosition: '90% 20%'
         }}
       />
 
-      {/* Background Video - Smoothly fades in once loaded, positioned at 80% */}
+      {/* Background Video - Smoothly fades in once loaded, positioned at 90% */}
       <video
         ref={videoRef}
         loop
@@ -77,21 +77,21 @@ const Hero = ({ onVideoLoaded }) => {
         className={`absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${
           isVideoReady ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ objectPosition: '80% 20%' }}
+        style={{ objectPosition: '90% 20%' }}
       >
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Gradient mask to preserve original video brightness while ensuring text readability */}
-      {/* Uses a left-to-right/bottom-to-top gradient since text is moved to the right */}
-      <div className="absolute inset-0 bg-gradient-to-tl from-black/75 via-transparent to-transparent z-10" />
+      {/* Re-angled to bottom-left/bottom-right text placement cover */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-black/75 via-transparent to-transparent z-10" />
 
-      {/* Content Container (uses flex-row-reverse to swap text to the right and play button to the left) */}
-      <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-16 max-w-[1400px] mx-auto flex flex-col md:flex-row-reverse justify-end md:justify-between items-start md:items-end text-left w-full">
+      {/* Content Container (standard row: text on the left, play button on the right) */}
+      <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-16 max-w-[1400px] mx-auto flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end text-left w-full">
         
-        {/* Right Side: Text and Buttons (right-aligned on desktop to balance layout) */}
-        <div className="flex flex-col items-start text-left md:items-end md:text-right max-w-xl w-full z-20">
+        {/* Left Side: Text and Buttons */}
+        <div className="flex flex-col items-start text-left max-w-xl w-full z-20">
 
           {/* Main Heading */}
           <h1 
@@ -111,11 +111,11 @@ const Hero = ({ onVideoLoaded }) => {
             {heroContent.subtitle}
           </p>
 
-          {/* Buttons (justifies to the right on desktop) */}
+          {/* Buttons (justifies to the start/left) */}
           <div 
             data-aos="fade-up"
             data-aos-delay="400"
-            className="flex flex-row flex-wrap items-center md:justify-end gap-3 w-full"
+            className="flex flex-row flex-wrap items-center justify-start gap-3 w-full"
           >
             {/* Primary Button */}
             <a 
@@ -147,7 +147,7 @@ const Hero = ({ onVideoLoaded }) => {
           </div>
         </div>
 
-        {/* Left Side: Play Video Button */}
+        {/* Right Side: Play Video Button */}
         <div 
           data-aos="zoom-in"
           data-aos-delay="600"
