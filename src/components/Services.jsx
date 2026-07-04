@@ -78,7 +78,7 @@ const Services = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[1780px]">
+      <div className="max-w-6xl mx-auto relative md:h-[2050px]">
         
         {/* Header Content */}
         <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
@@ -98,15 +98,15 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Desktop SVG Animated Dashed Line (Extended to fit 5 cards and 1780px height) */}
+        {/* Desktop SVG Animated Dashed Line (Extended to fit 5 cards and 2050px height) */}
         <svg 
-          className="hidden md:block absolute top-0 left-0 w-full h-[1780px] pointer-events-none z-0" 
-          viewBox="0 0 1000 1780" 
+          className="hidden md:block absolute top-0 left-0 w-full h-[2050px] pointer-events-none z-0" 
+          viewBox="0 0 1000 2050" 
           preserveAspectRatio="none"
         >
           {/* Faint background path (optional guide) */}
           <path 
-            d="M 650,120 C 450,220 200,320 300,520 C 400,720 750,670 700,890 C 650,1110 200,1060 300,1260 C 400,1460 750,1410 650,1600" 
+            d="M 650,120 C 450,260 200,420 300,660 C 400,860 750,820 700,1060 C 650,1280 200,1230 300,1460 C 400,1680 750,1630 650,1860" 
             fill="none" 
             stroke="#cbd5e1" 
             strokeWidth="2" 
@@ -116,7 +116,7 @@ const Services = () => {
           {/* Mask to reveal the dashed path based on scroll */}
           <mask id="path-mask">
             <motion.path 
-              d="M 650,120 C 450,220 200,320 300,520 C 400,720 750,670 700,890 C 650,1110 200,1060 300,1260 C 400,1460 750,1410 650,1600" 
+              d="M 650,120 C 450,260 200,420 300,660 C 400,860 750,820 700,1060 C 650,1280 200,1230 300,1460 C 400,1680 750,1630 650,1860" 
               fill="none" 
               stroke="white" 
               strokeWidth="20" 
@@ -126,7 +126,7 @@ const Services = () => {
 
           {/* The actual dashed line that gets revealed */}
           <path 
-            d="M 650,120 C 450,220 200,320 300,520 C 400,720 750,670 700,890 C 650,1110 200,1060 300,1260 C 400,1460 750,1410 650,1600" 
+            d="M 650,120 C 450,260 200,420 300,660 C 400,860 750,820 700,1060 C 650,1280 200,1230 300,1460 C 400,1680 750,1630 650,1860" 
             fill="none" 
             stroke="black" 
             strokeWidth="2" 
@@ -177,10 +177,10 @@ const Services = () => {
           {skillsContent.cards.map((card, index) => {
             const positions = [
               "md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-4",
-              "md:absolute md:top-[380px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-4",
-              "md:absolute md:top-[750px] md:right-[5%] lg:right-[10%] rotate-1 md:rotate-3",
-              "md:absolute md:top-[1120px] md:left-[10%] lg:left-[15%] -rotate-1 md:-rotate-3",
-              "md:absolute md:top-[1490px] md:right-[15%] lg:right-[20%] rotate-2 md:rotate-4",
+              "md:absolute md:top-[520px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-4",
+              "md:absolute md:top-[920px] md:right-[5%] lg:right-[10%] rotate-1 md:rotate-3",
+              "md:absolute md:top-[1320px] md:left-[10%] lg:left-[15%] -rotate-1 md:-rotate-3",
+              "md:absolute md:top-[1720px] md:right-[15%] lg:right-[20%] rotate-2 md:rotate-4",
             ];
             const aosTypes = ["fade-left", "fade-right", "fade-left", "fade-right", "fade-left"];
             const aosDelays = ["100", "200", "300", "400", "500"];
@@ -204,7 +204,7 @@ const Services = () => {
           <div 
             data-aos="fade-in" 
             data-aos-delay="700"
-            className="hidden md:block absolute top-[1700px] left-[55%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            className="hidden md:block absolute top-[1950px] left-[55%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             {skillsContent.endText}
           </div>
